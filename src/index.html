@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="script.js"></script>
+    <title>Пионер</title>
+</head>
+<body>
+<div class="px-10 mt-10 bg-white text-black lg:px-20 xl:px-28 2xl:px-40">
+    <!-- Header -->
+    <header class="mb-10">
+        <div class="flex justify-between pb-7 border-b border-gray-500 mb-5">
+            <img src="assets/images/header/logo.svg" alt="лого ПИОНЕР">
+            <div class="flex">
+                <div class="flex flex-col mr-20">
+                    <span class="text-lg lg:text-base xl:text-lg">По вопросам и предложениям</span>
+                    <span class="text-2xl lg:text-xl xl:text-2xl underline text-indigo-500">pionerrr@sila.ru</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg lg:text-base xl:text-lg">Для консультаций</span>
+                    <span class="text-2xl lg:text-xl xl:text-2xl text-indigo-500">+ 7 (495) 456-24-21</span>
+                </div>
+            </div>
+        </div>
+        <ul class="hidden justify-between text-lg lg:flex lg:text-sm xl:text-lg">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О предприятии</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Продукция</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><a href="#">География поставок</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li class="flex">
+                <img class="mr-2" src="assets/images/header/phone.svg" alt="лого телефон">
+                <span>Перезвоните мне</span>
+            </li>
+        </ul>
+
+        <div class="flex lg:hidden">
+            <button type="button" id="button-open-mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onclick="openMobileMenu()">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden lg:hidden" role="dialog" aria-modal="true" id="MobileMenu">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <img class="h-8 w-auto" src="assets/images/header/logo.svg" alt="logo in mobile menu">
+                    </a>
+                    <button type="button" id="button-close-mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700" onclick="closeMobileMenu()">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Главная</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">О предприятии</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Новости</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Продукция</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Услуги</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Поддержка</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">География поставок</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Контакты</a>
+                        </div>
+                        <div class="py-6 flex">
+                            <img class="mr-4" src="assets/images/header/phone.svg" alt="лого телефон">
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Перезвоните мне</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Mobile menu -->
+
+    </header>
+    <!-- end Header -->
+
+    <!-- Zavod -->
+    <div class="mb-10">
+        <div class="flex mb-6">
+            <div class="basis-1/2 text-stone-900 text-5xl md:text-3xl  xl:text-5xl font-bold">
+                Российский завод силовых машин
+            </div>
+            <div class="basis-1/2 text-xl pt-5 pl-5 md:pt-0 md:pl-0   xl:basis-1/3 xl:text-xl">
+                научно-производственное предприятие, занимающиеся разработкой и производством силовых машин.
+            </div>
+        </div>
+        <img class="object-cover w-full h-96" src="assets/images/zavod/imgonline-com-ua-BigPicture-Q8h4XnmWUkNj.jpg" alt="Российский завод силовых машин">
+    </div>
+    <!-- end Zavod -->
+
+    <!-- About Zavod -->
+    <div class="mb-10">
+        <div class="text-stone-900 font-bold text-4xl mb-10 lg:text-2xl xl:text-4xl">
+            О предприятии
+        </div>
+        <div class="flex gap-6 text-lg mb-8 text-justify lg:text-base xl:text-lg">
+            <div class="basis-1/2">
+                За 20 лет развития в структуре завода сформирован мощный производственный потенциал,
+                научно-технический центр, испытательная лаборатория,
+                современная база, учебный центр и широкая сеть региональных и международных представительств
+                в Российской Федерации,
+                Республике Беларусь, Узбекистане и Казахстане.
+            </div>
+            <div class="basis-1/2">
+                В номенклатуре выпускаемой НПП «ПИОНЕР» продукции найдется все, что необходимо для успешного решения
+                задачи автоматизации технологических процессов на любом предприятии. Все средства измерения
+                производства «ПИОНЕР» внесены в Государственный реестр СИ и имеют необходимые разрешительные
+                документы.
+            </div>
+        </div>
+        <div class="flex text-lg mb-8 gap-6 text-justify lg:text-base xl:text-lg">
+            <div class="basis-1/2">
+                Ежегодно НПП «ПИОНЕР» реализует несколько проектов по модернизации серийных и разработке новых
+                приборов, призванные в наибольшей степени удовлетворять возрастающие требования наших заказчиков.
+            </div>
+        </div>
+        <div class="flex flex-col gap-6 lg:flex-row">
+            <img class="basis-1/2 w-full  object-cover lg:w-52 lg:h-64 xl:w-[15rem] xl:h-80 2xl:h-96 2xl:w-[580px]"
+                 src="assets/images/about-zavod/aurelien-romain-DB_q6rPFnBM-unsplash.jpg" alt="img about zavod 1"
+            >
+            <img class="basis-1/2 w-full  object-cover lg:w-52 lg:h-64 xl:w-[15rem] xl:h-80 2xl:h-96 2xl:w-[580px]"
+                 src="assets/images/about-zavod/carlos-aranda-QMjCzOGeglA-unsplash.jpg" alt="img about zavod 2"
+            >
+        </div>
+    </div>
+    <!-- End About Zavod -->
+
+    <!-- Productions -->
+    <div class="mb-10">
+        <div class="text-stone-900 font-bold text-4xl mb-10">
+            Продукция
+        </div>
+        <div class="grid grid-cols-3 gap-20 lg:gap-10">
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/06c66ef48d3d590545623cb662541761.png" alt="Сигнализатор уровня">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    Сигнализатор уровня
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/title-aero.png" alt="Датчики давления">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    Датчики давления
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/kamaz1.png" alt="ПИД-регуляторы">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    ПИД-регуляторы
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/turbo.png" alt="Калибатор давления">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    Калибатор давления
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/main-slide-power.png" alt="Корректор расхода газа">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    Корректор расхода газа
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+            <div class="flex flex-col bg-gray-100">
+                <img class="h-40 w-52 mb-14 mt-5 mx-auto" src="assets/images/productions/engine.png" alt="Манометры">
+                <div class="text-xl font-bold text-stone-900 mb-5 pl-3 2xl:text-2xl">
+                    Манометры
+                </div>
+                <a class="text-lg text-indigo-400 pl-3 mb-5 2xl:text-xl" href="#">Подробнее ></a>
+            </div>
+        </div>
+    </div>
+    <!-- end Productions -->
+
+    <!-- Map -->
+    <div class="mb-10">
+        <div class="text-stone-900 font-bold text-4xl mb-14">
+            Представительства
+        </div>
+        <img class="mx-auto w-full" src="assets/images/map/map.png" alt="карта">
+    </div>
+    <!-- end Map -->
+
+    <!-- News -->
+    <div class="mb-10">
+        <div class="text-stone-900 font-bold text-4xl mb-10">
+            Новости
+        </div>
+        <div class="flex flex-row justify-between gap-10">
+            <div class="basis-1/3">
+                <div class="flex flex-col bg-gray-100 h-[500px] relative">
+                    <img class="h-72 mb-3" src="assets/images/news/jonas-morgner-F7u5fL11Lt0-unsplash.jpg" alt="news-img-1">
+                    <div class="text-lg px-5 text-stone-900 lg:text-base xl:text-xl">
+                        НПП «ПИОНЕР» подтвердило свои компетенции в области консультирования и изготовления…
+                    </div>
+                    <div class="flex flex-row">
+                        <a class="absolute bottom-5 left-4 text-lg text-indigo-500" href="#">Читать далее></a>
+                        <div class="absolute bottom-5 right-4 text-stone-500">
+                            20.07.2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-1/3">
+                <div class="flex flex-col bg-gray-100 h-[500px] relative">
+                    <img class="h-72 mb-3" src="assets/images/news/greg-rosenke-xoxnfVIE7Qw-unsplash.jpg" alt="news-img-2">
+                    <div class="text-lg px-5 text-stone-900 lg:text-base xl:text-xl">
+                        Поздравляем коллектив регионального представительства «ПИОНЕР» с праздником!
+                    </div>
+                    <div class="flex flex-row">
+                        <a class="absolute bottom-5 left-4 text-lg text-indigo-500" href="#">Читать далее></a>
+                        <div class="absolute bottom-5 right-4 text-stone-500">
+                            20.07.2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-1/3">
+                <div class="flex flex-col bg-gray-100 h-[500px] relative">
+                    <img class="h-72 mb-3" src="assets/images/news/rafael-juarez-hTUdXgbhd3o-unsplash.jpg" alt="news-img-3">
+                    <div class="text-lg px-5 text-stone-900 lg:text-base xl:text-xl">
+                        Перенос сроков проведения запланированных работ в 2020 году
+                    </div>
+                    <div class="flex flex-row">
+                        <a class="absolute bottom-5 left-4 text-lg text-indigo-500" href="#">Читать далее></a>
+                        <div class="absolute bottom-5 right-4 text-stone-500">
+                            20.07.2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end News -->
+</div>
+<!-- Footer -->
+<footer class="bg-stone-800 text-white">
+    <div class="flex flex-row px-10 lg:px-20 xl:px-28 2xl:px-40">
+        <div class="basis-1/2">
+            <img class="w-44 h-28 pt-6" src="assets/images/footer/logo.svg" alt="footer-logo">
+        </div>
+        <ul class="basis-1/6 pt-4 mb-10 mr-10">
+            <li class="mb-4"><a href="#">Главная</a></li>
+            <li class="mb-4"><a href="#">О предприятии</a></li>
+            <li class="mb-4"><a href="#">Новости</a></li>
+            <li class="mb-4"><a href="#">Продукция</a></li>
+            <li class="mb-4"><a href="#">Услуги</a></li>
+        </ul>
+        <ul class="basis-1/6 pt-4 mb-10 mr-10">
+            <li class="mb-4"><a href="#">Поддержка</a></li>
+            <li class="mb-4"><a href="#">География поставок</a></li>
+            <li class="mb-4"><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="basis-1/6 pt-4 mb-10 mr-10">
+            <li class="mb-4"><a href="#">Файлы</a></li>
+            <li class="mb-4"><a href="#">Поддержка</a></li>
+            <li class="mb-4"><a href="#">Политика конфеденциальности</a></li>
+        </ul>
+    </div>
+    <div class="text-center pb-5">
+        1994-2020 OOO «ПИОНЕР»
+    </div>
+</footer>
+<!-- end Footer -->
+</body>
+</html>
